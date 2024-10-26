@@ -1,3 +1,4 @@
+import CustomerDiscoveryPlan from "./CustomerDiscoveryPlan";
 import IdentifyingProblem from "./IdentifyingProblem";
 import Solution from "./Solution";
 
@@ -6,6 +7,7 @@ const Milestone2 = () => {
     <div className="space-y-6">
       <IdentifyingProblem />
       <Solution />
+      <CustomerDiscoveryPlan />
     </div>
   );
 };
