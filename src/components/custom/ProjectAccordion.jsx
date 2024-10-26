@@ -6,6 +6,20 @@ import {
 } from "@/components/ui/accordion";
 import { useState } from "react";
 import Milestone1 from "./milestone1/Milestone1";
+import Milestone2 from "./milestone2/Milestone2";
+
+const milestones = [
+  {
+    id: "m1",
+    title: "Milestone 1",
+    content: Milestone1,
+  },
+  {
+    id: "m2",
+    title: "Milestone 2",
+    content: Milestone2,
+  },
+];
 
 const ProjectAccordion = () => {
   // Extragem parametrii din URL
@@ -44,19 +58,21 @@ const ProjectAccordion = () => {
   return (
     <div className="w-full flex justify-center mt-5">
       <Accordion type="multiple" className="w-3/4" defaultValue={openSections}>
-        <AccordionItem value="m1">
-          <AccordionTrigger
-            className="flex justify-center hover:no-underline"
-            onClick={() => toggleSection("m1")}
-          >
-            <h1 className="text-3xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
-              Milestone 1
-            </h1>
-          </AccordionTrigger>
-          <AccordionContent>
-            <Milestone1 />
-          </AccordionContent>
-        </AccordionItem>
+        {milestones.map((milestone) => (
+          <AccordionItem key={milestone.id} value={milestone.id}>
+            <AccordionTrigger
+              className="flex justify-center hover:no-underline"
+              onClick={() => toggleSection(milestone.id)}
+            >
+              <h1 className="text-3xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+                {milestone.title}
+              </h1>
+            </AccordionTrigger>
+            <AccordionContent>
+              <milestone.content />
+            </AccordionContent>
+          </AccordionItem>
+        ))}
       </Accordion>
     </div>
   );
