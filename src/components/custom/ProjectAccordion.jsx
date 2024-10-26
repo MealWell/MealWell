@@ -46,7 +46,7 @@ const ProjectAccordion = () => {
       <Accordion type="multiple" className="w-3/4" defaultValue={openSections}>
         <AccordionItem value="m1">
           <AccordionTrigger
-            className="flex justify-center"
+            className="flex justify-center hover:no-underline"
             onClick={() => toggleSection("m1")}
           >
             <h1 className="text-3xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
