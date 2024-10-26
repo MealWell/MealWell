@@ -16,7 +16,7 @@ const membersInfo = [
     img: "./members/edi.jpeg",
   },
   {
-    name: "Denis Rusu",
+    name: "Dionisie Rusu",
     role: "Developer",
     description:
       "Denis Rusu este Fullstack Developer cu 2 ani de experiență la GlobalSoftwareSystems. Este implicat activ în dezvoltarea atât a frontend-ului, cât și a backend-ului proiectelor, aducând flexibilitate și expertiză tehnică echipei.",
