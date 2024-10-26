@@ -3,6 +3,7 @@ import ProblemDescription from "./ProblemDescription";
 import ProblemSolution from "./ProblemSolution";
 import CustomerSegments from "./CustomerSegments";
 import Competition from "./Competition";
+import Advantages from "./Advantages";
 
 const Milestone1 = () => {
   return (
@@ -12,6 +13,7 @@ const Milestone1 = () => {
       <ProblemSolution />
       <CustomerSegments />
       <Competition />
+      <Advantages />
     </div>
   );
 };
