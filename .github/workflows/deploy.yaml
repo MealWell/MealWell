@@ -16,6 +16,8 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@v3
+        with:
+          node-version: '18' # Folosește o versiune LTS recentă
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
@@ -33,7 +35,6 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/fiki'
 
     steps:
       - name: Download artifact
@@ -41,6 +42,9 @@ jobs:
         with:
           name: production-files
           path: ./dist
+
+      - name: Prevent GitHub Pages Jekyll processing
+        run: echo "" > ./dist/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
