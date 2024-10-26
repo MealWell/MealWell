@@ -8,6 +8,15 @@ const ProblemSolution = () => {
         Soluția propusă
       </h1>
       <div className="text-xl text-justify">
+        <p>
+          Aplicatia noastră simplifică alimentația oferind mese personalizate în
+          funcție de obiectivele utilizatorului (menținere, pierdere în greutate
+          sau creștere în greutate). Utilizatorii aleg mesele preferate, iar
+          aplicația creează un plan variat și delicios, cu calculele necesare de
+          calorii și nutrienți. Totul este adaptat preferințelor personale,
+          eliminând stresul și economisind timp, oferind, în esență, un bucătar
+          și un nutriționist la un click distanță.
+        </p>
         <div className="flex mt-5">
           <div>
             <h2 className="font-bold">Abonamente personalizate:</h2>
@@ -35,12 +44,11 @@ const ProblemSolution = () => {
               </li>
             </ul>
 
-            <h2 className="font-bold">Livrare la domiciliu:</h2>
+            <h2 className="font-bold">Opțiuni de planificare săptămânală:</h2>
             <p className="my-3 ml-6 mt-2 ps-4">
-              <strong>Comoditate maximă:</strong> Oferim livrare la ușa
-              clientului, eliminând astfel efortul de a merge la cumpărături sau
-              de a pregăti mesele. Acest serviciu va avea un cost suplimentar,
-              dar va fi o opțiune convenabilă pentru clienți.
+              <strong>Clienții</strong> pot alege să primească mese pentru o
+              anumită perioadă (de exemplu, 3, 5 sau 7 zile pe săptămână),
+              adaptându-se astfel la programul lor personal.
             </p>
           </div>
           <div className="hidden xl:flex items-center w-1/2 justify-center ps-4">
@@ -53,11 +61,12 @@ const ProblemSolution = () => {
             <MdOutlineDeliveryDining className="text-[15rem] text-blue-600" />
           </div>
           <div>
-            <h2 className="font-bold">Opțiuni de planificare săptămânală:</h2>
+            <h2 className="font-bold">Livrare la domiciliu:</h2>
             <p className="my-3 ml-6 mt-2">
-              <strong>Clienții</strong> pot alege să primească mese pentru o
-              anumită perioadă (de exemplu, 3, 5 sau 7 zile pe săptămână),
-              adaptându-se astfel la programul lor personal.
+              <strong>Comoditate maximă:</strong> Oferim livrare la ușa
+              clientului, eliminând astfel efortul de a merge la cumpărături sau
+              de a pregăti mesele. Acest serviciu va avea un cost suplimentar,
+              dar va fi o opțiune convenabilă pentru clienți.
             </p>
 
             <h2 className="font-bold">
