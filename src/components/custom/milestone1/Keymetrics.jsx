@@ -5,7 +5,7 @@ const Keymetrics = () => {
         Key Metrics
       </h1>
       <div className="text-xl text-justify">
-        <ul className="my-3 ml-6 list-disc [&>li]:mt-2 text-xl">
+        <ul className="my-3 ml-6 list-disc [&>li]:mt-2">
           <li>
             <strong>Rata de Retenție a Clienților</strong>
             <br />

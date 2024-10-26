@@ -5,6 +5,7 @@ import CustomerSegments from "./CustomerSegments";
 import Competition from "./Competition";
 import Advantages from "./Advantages";
 import Keymetrics from "./Keymetrics";
+import CostStructure from "./CostStructure";
 
 const Milestone1 = () => {
   return (
@@ -16,6 +17,7 @@ const Milestone1 = () => {
       <Competition />
       <Advantages />
       <Keymetrics />
+      <CostStructure />
     </div>
   );
 };
