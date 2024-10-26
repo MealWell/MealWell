@@ -2,6 +2,7 @@ import Members from "./Members";
 import ProblemDescription from "./ProblemDescription";
 import ProblemSolution from "./ProblemSolution";
 import CustomerSegments from "./CustomerSegments";
+import Competition from "./Competition";
 
 const Milestone1 = () => {
   return (
@@ -10,6 +11,7 @@ const Milestone1 = () => {
       <ProblemDescription />
       <ProblemSolution />
       <CustomerSegments />
+      <Competition />
     </div>
   );
 };
