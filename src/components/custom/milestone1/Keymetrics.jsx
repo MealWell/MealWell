@@ -22,13 +22,6 @@ const Keymetrics = () => {
             </span>
           </li>
           <li>
-            <strong>Rata de Creștere a Abonamentelor</strong>
-            <br />
-            <span className="text-gray-500">
-              Creșterea lunară a numărului de abonați
-            </span>
-          </li>
-          <li>
             <strong>Rata de Conversie</strong>
             <br />
             <span className="text-gray-500">
