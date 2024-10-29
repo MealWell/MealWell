@@ -13,13 +13,15 @@ const Member = ({ member }) => {
   return (
     <Card className="w-full">
       <CardHeader className="w-full flex items-center">
-        <Avatar className="w-1/3 h-1/3">
+        <Avatar className={"size-32"}>
           <AvatarImage
             className="object-cover"
             src={member.img}
             alt={member.name}
           />
-          <AvatarFallback>{fallback}</AvatarFallback>
+          <AvatarFallback>
+            <span className="text-3xl">{fallback}</span>
+          </AvatarFallback>
         </Avatar>
       </CardHeader>
       <CardContent className="space-y-2">
