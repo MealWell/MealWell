@@ -1,19 +1,22 @@
+import { TypographyH2 } from "@/components/custom/typography/TypographyH2.jsx";
+import { TypographyList } from "@/components/custom/typography/TypographyList.jsx";
+import { TypographyH4 } from "@/components/custom/typography/TypographyH4.jsx";
+import { gradientClassNames } from "@/styles/gradient.js";
+
 const Competition = () => {
   return (
     <div className="mt-5">
-      <h1 className="mb-5 text-5xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+      <TypographyH2 className={`${gradientClassNames}`}>
         Competiție
-      </h1>
+      </TypographyH2>
       <div className="flex flex-col xl:flex-row">
-        <div className="text-xl text-justify">
-          <h2 className="font-bold">Competitor: LifeBox</h2>
-          <p>
-            LifeBox se poziționează ca un furnizor de servicii de livrare a
-            meselor sănătoase, având mai multe meniuri concepute de
-            nutriționiști pentru a satisface nevoile diverse ale consumatorilor.
-            Iată câteva dintre caracteristicile cheie care îi definesc oferta:
-          </p>
-          <ul className="my-3 list-disc [&>li]:mt-2 ps-8">
+        <div className="text-justify">
+          <TypographyH4>Competitor: LifeBox</TypographyH4>
+          LifeBox se poziționează ca un furnizor de servicii de livrare a
+          meselor sănătoase, având mai multe meniuri concepute de nutriționiști
+          pentru a satisface nevoile diverse ale consumatorilor. Iată câteva
+          dintre caracteristicile cheie care îi definesc oferta:
+          <TypographyList className="">
             <li>
               <strong>Meniuri Nutriționale:</strong> LifeBox oferă o gamă
               variată de meniuri, fiecare dintre ele fiind întocmit de
@@ -41,10 +44,10 @@ const Competition = () => {
               clienții, LifeBox oferă diverse oferte promoționale, permițând
               utilizatorilor să beneficieze de discounturi sau mese gratuite.
             </li>
-          </ul>
+          </TypographyList>
         </div>
-        <div className="xl:ml-4 flex items-center">
-          <img src="./competitor/lifebox.png" />
+        <div className="flex justify-center items-center">
+          <img src="public/competitor/lifebox.png" alt={"competitor-lifebox"} />
         </div>
       </div>
     </div>

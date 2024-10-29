@@ -7,6 +7,8 @@ import {
 import { useState } from "react";
 import Milestone1 from "./milestone1/Milestone1";
 import Milestone2 from "./milestone2/Milestone2";
+import { TypographyH2 } from "@/components/custom/typography/TypographyH2.jsx";
+import { gradientClassNames } from "@/styles/gradient.js";
 
 const milestones = [
   {
@@ -22,14 +24,12 @@ const milestones = [
 ];
 
 const ProjectAccordion = () => {
-  // Extragem parametrii din URL
   const getOpenSectionsFromURL = () => {
     const params = new URLSearchParams(window.location.search);
     return params.get("openSections")?.split(",") || [];
   };
-  // Stare pentru acordoanele deschise, inițializată din URL
   const [openSections, setOpenSections] = useState(getOpenSectionsFromURL());
-  // Funcția care sincronizează URL-ul cu starea deschiderii/închiderii
+
   const updateURL = (updatedSections) => {
     const params = new URLSearchParams(window.location.search);
     if (updatedSections.length) {
@@ -37,15 +37,14 @@ const ProjectAccordion = () => {
     } else {
       params.delete("openSections");
     }
-    // Actualizăm URL-ul fără a reîncărca pagina
+
     window.history.replaceState(
       {},
       "",
-      `${window.location.pathname}?${params.toString()}`
+      `${window.location.pathname}?${params.toString()}`,
     );
   };
 
-  // Funcția de toggle pentru secțiuni
   const toggleSection = (sectionId) => {
     const isOpen = openSections.includes(sectionId);
     const updatedSections = isOpen
@@ -64,9 +63,9 @@ const ProjectAccordion = () => {
               className="flex justify-center hover:no-underline"
               onClick={() => toggleSection(milestone.id)}
             >
-              <h1 className="text-3xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+              <TypographyH2 className={`${gradientClassNames}`}>
                 {milestone.title}
-              </h1>
+              </TypographyH2>
             </AccordionTrigger>
             <AccordionContent>
               <milestone.content />

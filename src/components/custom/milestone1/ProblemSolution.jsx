@@ -1,14 +1,19 @@
 import { GiMeal } from "react-icons/gi";
 import { MdOutlineDeliveryDining } from "react-icons/md";
+import { TypographyH3 } from "@/components/custom/typography/TypographyH3.jsx";
+import { TypographyP } from "@/components/custom/typography/TypographyP.jsx";
+import { TypographyList } from "@/components/custom/typography/TypographyList.jsx";
+import { TypographyH4 } from "@/components/custom/typography/TypographyH4.jsx";
+import { gradientClassNames } from "@/styles/gradient.js";
 
 const ProblemSolution = () => {
   return (
     <div className="mt-5">
-      <h1 className="mb-5 text-5xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+      <TypographyH3 className={`${gradientClassNames}`}>
         Soluția propusă
-      </h1>
-      <div className="text-xl text-justify">
-        <p>
+      </TypographyH3>
+      <div className="text-justify">
+        <TypographyP>
           Aplicatia noastră simplifică alimentația oferind mese personalizate în
           funcție de obiectivele utilizatorului (menținere, pierdere în greutate
           sau creștere în greutate). Utilizatorii aleg mesele preferate, iar
@@ -16,11 +21,13 @@ const ProblemSolution = () => {
           calorii și nutrienți. Totul este adaptat preferințelor personale,
           eliminând stresul și economisind timp, oferind, în esență, un bucătar
           și un nutriționist la un click distanță.
-        </p>
+        </TypographyP>
         <div className="flex mt-5">
           <div>
-            <h2 className="font-bold">Abonamente personalizate:</h2>
-            <ul className="my-3 ml-6 list-disc [&>li]:mt-2 ps-8">
+            <TypographyH4 className="font-bold">
+              Abonamente personalizate:
+            </TypographyH4>
+            <TypographyList className="my-3">
               <li>
                 <strong>Planuri bogate în proteine:</strong> Destinate
                 persoanelor care doresc să câștige masă musculară sau care
@@ -42,52 +49,56 @@ const ProblemSolution = () => {
                 <strong>Planuri tradiționale:</strong> Oferind mese bazate pe
                 rețete locale și tradiționale.
               </li>
-            </ul>
+            </TypographyList>
 
-            <h2 className="font-bold">Opțiuni de planificare săptămânală:</h2>
-            <p className="my-3 ml-6 mt-2 ps-4">
+            <TypographyH4 className="font-bold">
+              Opțiuni de planificare săptămânală:
+            </TypographyH4>
+            <TypographyP className="my-3 ml-6">
               <strong>Clienții</strong> pot alege să primească mese pentru o
               anumită perioadă (de exemplu, 3, 5 sau 7 zile pe săptămână),
               adaptându-se astfel la programul lor personal.
-            </p>
+            </TypographyP>
           </div>
           <div className="hidden xl:flex items-center w-1/2 justify-center ps-4">
             <GiMeal className="text-[15rem] text-blue-600" />
           </div>
         </div>
 
-        <div className="flex mt-5">
+        <div className="flex">
           <div className="hidden xl:flex items-center w-1/2 justify-center pe-4">
             <MdOutlineDeliveryDining className="text-[15rem] text-blue-600" />
           </div>
           <div>
-            <h2 className="font-bold">Livrare la domiciliu:</h2>
-            <p className="my-3 ml-6 mt-2">
+            <TypographyH4 className="font-bold">
+              Livrare la domiciliu:
+            </TypographyH4>
+            <TypographyP className="my-3 ml-6 mt-2">
               <strong>Comoditate maximă:</strong> Oferim livrare la ușa
               clientului, eliminând astfel efortul de a merge la cumpărături sau
               de a pregăti mesele. Acest serviciu va avea un cost suplimentar,
               dar va fi o opțiune convenabilă pentru clienți.
-            </p>
+            </TypographyP>
 
-            <h2 className="font-bold">
+            <TypographyH4 className="font-bold">
               Interfață prietenoasă și ușor de utilizat:
-            </h2>
-            <p className="my-3 ml-6 mt-2">
+            </TypographyH4>
+            <TypographyP className="my-3 ml-6 mt-2">
               <strong>Un site web</strong> care să permită utilizatorilor să-și
               gestioneze abonamentele, să selecteze planurile alimentare dorite,
               să facă modificări sau să comande mese suplimentare.
-            </p>
+            </TypographyP>
           </div>
         </div>
-        <h2 className="font-bold">Concluzie</h2>
-        <p className="my-3 ml-6 mt-2">
+        <TypographyH4 className="font-bold">Concluzie</TypographyH4>
+        <TypographyP className="my-3 ml-6 mt-2">
           <strong>MealWell</strong> nu este doar o aplicație de livrare de mese,
           ci o soluție completă pentru un stil de viață sănătos, adresându-se
           celor care au un program încărcat, dar care doresc să își mențină
           sănătatea și forma fizică. Prin personalizare, comoditate și suport
           nutrițional, ne propunem să facem alimentația sănătoasă accesibilă
           pentru toți.
-        </p>
+        </TypographyP>
       </div>
     </div>
   );
