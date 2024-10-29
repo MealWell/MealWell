@@ -1,11 +1,15 @@
+import { TypographyList } from "@/components/custom/typography/TypographyList.jsx";
+import { TypographyH3 } from "@/components/custom/typography/TypographyH3.jsx";
+import { gradientClassNames } from "@/styles/gradient.js";
+
 const Advantages = () => {
   return (
     <div className="mt-5">
-      <h1 className="mb-5 text-5xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+      <TypographyH3 className={`${gradientClassNames}`}>
         Avantajele noastre
-      </h1>
+      </TypographyH3>
       <div>
-        <ul className="my-3 ml-6 list-disc [&>li]:mt-2 text-xl">
+        <TypographyList className="my-3">
           <li>
             <strong>Abonamente mixte și schimbări rapide de meniu: </strong>
             Permite utilizatorilor să combine mai multe tipuri de planuri.
@@ -35,9 +39,9 @@ const Advantages = () => {
           <li>
             <strong>Meniu „Surpriză”: </strong>
             Opțiune cu o selecție de mese mai puțin întâlnite în opțiunile
-            uzuale, pentru utilizatorii deschiși la noi experiențe culinare
+            uzuale, pentru utilizatorii deschiși la noi experiențe culinare.
           </li>
-        </ul>
+        </TypographyList>
       </div>
     </div>
   );

@@ -1,6 +1,8 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { useMemo } from "react";
+import { TypographyH4 } from "@/components/custom/typography/TypographyH4.jsx";
+import { TypographyP } from "@/components/custom/typography/TypographyP.jsx";
 
 const Member = ({ member }) => {
   const fallback = useMemo(() => {
@@ -25,9 +27,11 @@ const Member = ({ member }) => {
         </Avatar>
       </CardHeader>
       <CardContent className="space-y-2">
-        <h2 className="text-xl font-bold">{member.name}</h2>
-        <p className="text-md text-gray-500">{member.role}</p>
-        <p className="text-md">{member.description}</p>
+        <TypographyH4>{member.name}</TypographyH4>
+        <TypographyP className="text-muted-foreground mt-0 mb-0">
+          {member.role}
+        </TypographyP>
+        <TypographyP>{member.description}</TypographyP>
       </CardContent>
     </Card>
   );

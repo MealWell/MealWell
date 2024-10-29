@@ -1,15 +1,19 @@
+import { TypographyH3 } from "@/components/custom/typography/TypographyH3.jsx";
+import { TypographyList } from "@/components/custom/typography/TypographyList.jsx";
+import { gradientClassNames } from "@/styles/gradient.js";
+
 const RevenueStreams = () => {
   return (
     <div className="mt-5">
-      <h1 className="mb-5 text-5xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+      <TypographyH3 className={`${gradientClassNames}`}>
         Venituri preconizate
-      </h1>
-      <div className="text-xl text-justify">
-        <ul className="my-3 ml-6 list-disc [&>li]:mt-2">
+      </TypographyH3>
+      <div className="text-justify">
+        <TypographyList>
           <li>
             <strong>Abonamente pentru Planuri de Mese</strong>
             <br />
-            <span className="text-gray-500">
+            <span>
               Venituri din abonamentele lunare/săptămânale pentru planuri de
               mese.
             </span>
@@ -17,7 +21,7 @@ const RevenueStreams = () => {
           <li>
             <strong>Taxă de Livrare</strong>
             <br />
-            <span className="text-gray-500">
+            <span>
               Taxe suplimentare pentru opțiunile de livrare la domiciliu sau
               livrare rapidă.
             </span>
@@ -25,7 +29,7 @@ const RevenueStreams = () => {
           <li>
             <strong>Personalizare Meniu</strong>
             <br />
-            <span className="text-gray-500">
+            <span>
               Taxe adiționale pentru personalizări detaliate, cum ar fi
               excluderea anumitor alergeni, ingrediente speciale, sau calcul
               caloric precis.
@@ -34,7 +38,7 @@ const RevenueStreams = () => {
           <li>
             <strong>Produse Extra și Suplimente</strong>
             <br />
-            <span className="text-gray-500">
+            <span>
               Venituri din vânzarea produselor extra, precum gustări sănătoase,
               băuturi proteice, suplimente, și alimente specifice pentru diete.
             </span>
@@ -42,7 +46,7 @@ const RevenueStreams = () => {
           <li>
             <strong>Parteneriate și Colaborări</strong>
             <br />
-            <span className="text-gray-500">
+            <span>
               Venituri din parteneriate cu branduri de fitness, aplicații de
               sănătate sau programe corporative pentru abonamente de masă la
               preț redus.
@@ -51,12 +55,12 @@ const RevenueStreams = () => {
           <li>
             <strong>Publicitate și Sponsorizări</strong>
             <br />
-            <span className="text-gray-500">
+            <span>
               Venituri din publicitate pe platformă sau sponsorizarea unor
               campanii pentru produse compatibile cu misiunea MealWell.
             </span>
           </li>
-        </ul>
+        </TypographyList>
       </div>
     </div>
   );

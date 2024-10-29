@@ -1,4 +1,6 @@
 import Member from "./Member";
+import { TypographyH3 } from "@/components/custom/typography/TypographyH3.jsx";
+import { gradientClassNames } from "@/styles/gradient.js";
 
 const membersInfo = [
   {
@@ -48,9 +50,9 @@ const membersInfo = [
 const Members = () => {
   return (
     <div>
-      <h1 className="mb-5 text-5xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+      <TypographyH3 className={`${gradientClassNames}`}>
         Membrii echipei
-      </h1>
+      </TypographyH3>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-4">
         {membersInfo.map((member) => {
           return <Member key={member.name} member={member} />;

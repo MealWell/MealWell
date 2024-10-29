@@ -1,15 +1,19 @@
+import { TypographyH3 } from "@/components/custom/typography/TypographyH3.jsx";
+import { TypographyList } from "@/components/custom/typography/TypographyList.jsx";
+import { gradientClassNames } from "@/styles/gradient.js";
+
 const Keymetrics = () => {
   return (
     <div className="mt-5">
-      <h1 className="mb-5 text-5xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+      <TypographyH3 className={`${gradientClassNames}`}>
         Key Metrics
-      </h1>
-      <div className="text-xl text-justify">
-        <ul className="my-3 ml-6 list-disc [&>li]:mt-2">
+      </TypographyH3>
+      <div className="text-justify">
+        <TypographyList className="my-3">
           <li>
             <strong>Rata de Retenție a Clienților</strong>
             <br />
-            <span className="text-gray-500">
+            <span>
               Procentul de clienți care continuă să folosească MealWell pe o
               perioadă mai lungă.
             </span>
@@ -17,25 +21,21 @@ const Keymetrics = () => {
           <li>
             <strong>Rata de Creștere a Abonamentelor</strong>
             <br />
-            <span className="text-gray-500">
-              Creșterea lunară a numărului de abonați
-            </span>
+            <span>Creșterea lunară a numărului de abonați</span>
           </li>
           <li>
             <strong>Rata de Conversie</strong>
             <br />
-            <span className="text-gray-500">
+            <span>
               Procentul de vizitatori ai site-ului care devin clienți plătitori
             </span>
           </li>
           <li>
             <strong>Valoarea Medie a Comenzilor</strong>
             <br />
-            <span className="text-gray-500">
-              Suma medie cheltuită de fiecare client per comandă
-            </span>
+            <span>Suma medie cheltuită de fiecare client per comandă</span>
           </li>
-        </ul>
+        </TypographyList>
       </div>
     </div>
   );
