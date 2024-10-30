@@ -47,7 +47,7 @@ const Competition = () => {
           </TypographyList>
         </div>
         <div className="flex justify-center items-center">
-          <img src="public/competitor/lifebox.png" alt={"competitor-lifebox"} />
+          <img src="competitor/lifebox.png" alt={"competitor-lifebox"} />
         </div>
       </div>
     </div>
