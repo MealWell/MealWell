@@ -1,6 +1,7 @@
 import CustomerDiscoveryPlan from "./CustomerDiscoveryPlan";
 import IdentifyingProblem from "./IdentifyingProblem";
 import Solution from "./Solution";
+import Interviews from "@/components/custom/milestone2/Interviews.jsx";
 
 const Milestone2 = () => {
   return (
@@ -8,6 +9,7 @@ const Milestone2 = () => {
       <IdentifyingProblem />
       <Solution />
       <CustomerDiscoveryPlan />
+      <Interviews />
     </div>
   );
 };
