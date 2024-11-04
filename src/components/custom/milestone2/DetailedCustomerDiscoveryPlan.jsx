@@ -1,22 +1,27 @@
-import React from "react";
 import { TypographyH3 } from "../typography/TypographyH3";
 import { gradientClassNames } from "@/styles/gradient";
 import { TypographyP } from "../typography/TypographyP";
 import { TypographyList } from "../typography/TypographyList";
+import FormResults from "@/components/custom/milestone2/FormResults.jsx";
 
 const DetailedCustomerDiscoveryPlan = () => {
   return (
-    <div>
-      <TypographyH3 className={`${gradientClassNames}`}>
-        Discuții cu clienții
-      </TypographyH3>
-      <div className="text-justify space-y-2">
-        <TypographyP>
-          Am urmat planul inițial de descoperire a clienților și am realizat un
-          sondaj care ne-a permis să identificăm nevoile și preferințele
-          potențialilor utilizatori ai aplicației. Am colectat feedback de la
-          peste 25 de persoane și acestea sunt rezultatele obținute:
-        </TypographyP>
+    <>
+      <div>
+        <TypographyH3 className={`${gradientClassNames}`}>
+          Discuții cu clienții
+        </TypographyH3>
+        <div className="text-justify space-y-2">
+          <TypographyP>
+            Am urmat planul inițial de descoperire a clienților și am realizat
+            un sondaj care ne-a permis să identificăm nevoile și preferințele
+            potențialilor utilizatori ai aplicației. Am colectat feedback de la
+            peste 25 de persoane și acestea sunt rezultatele obținute:
+          </TypographyP>
+        </div>
+      </div>
+      <div>
+        <FormResults />
 
         <div className="text-justify space-y-2">
           <TypographyP>
@@ -192,7 +197,7 @@ const DetailedCustomerDiscoveryPlan = () => {
           </TypographyList>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
