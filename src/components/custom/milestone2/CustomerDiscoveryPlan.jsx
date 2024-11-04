@@ -38,14 +38,6 @@ const CustomerDiscoveryPlan = () => {
               de aplicație.
             </span>
           </li>
-          <li>
-            <strong className="me-2">Observație directă:</strong>
-            <span>
-              Vom analiza comportamentele alimentare ale studenților și
-              angajaților în medii sociale, precum cafenele și campusuri, pentru
-              a înțelege mai bine alegerile lor alimentare.
-            </span>
-          </li>
         </TypographyList>
       </div>
     </div>

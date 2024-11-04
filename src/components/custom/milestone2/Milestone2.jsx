@@ -1,4 +1,7 @@
+import Conclusions from "./Conclusions";
 import CustomerDiscoveryPlan from "./CustomerDiscoveryPlan";
+import CustomerValidation from "./CustomerValidation";
+import DetailedCustomerDiscoveryPlan from "./DetailedCustomerDiscoveryPlan";
 import IdentifyingProblem from "./IdentifyingProblem";
 import Solution from "./Solution";
 
@@ -8,6 +11,9 @@ const Milestone2 = () => {
       <IdentifyingProblem />
       <Solution />
       <CustomerDiscoveryPlan />
+      <DetailedCustomerDiscoveryPlan />
+      <Conclusions />
+      <CustomerValidation />
     </div>
   );
 };
