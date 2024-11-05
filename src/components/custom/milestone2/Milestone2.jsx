@@ -4,6 +4,7 @@ import CustomerValidation from "./CustomerValidation";
 import DetailedCustomerDiscoveryPlan from "./DetailedCustomerDiscoveryPlan";
 import IdentifyingProblem from "./IdentifyingProblem";
 import Solution from "./Solution";
+import Interviews from "@/components/custom/milestone2/Interviews.jsx";
 
 const Milestone2 = () => {
   return (
@@ -12,6 +13,7 @@ const Milestone2 = () => {
       <Solution />
       <CustomerDiscoveryPlan />
       <DetailedCustomerDiscoveryPlan />
+      <Interviews />
       <Conclusions />
       <CustomerValidation />
     </div>
