@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import ReactPlayer from "react-player";
 import "tailwindcss/tailwind.css";
 import { Button } from "@/components/ui/button.jsx";
 import {
@@ -21,17 +20,20 @@ const interviews = [
   {
     interviewee: "Liviu",
     picture: "interviews/interviewees/liviu.jpg",
-    interviewSrc: "interviews/liviu.MOV",
+    interviewSrc:
+      "https://drive.google.com/file/d/16r6m0RWfY1dAqL06Oc4uGky22-RhKVYM/preview",
   },
   {
     interviewee: "Veaceslav",
     picture: "interviews/interviewees/veaceslav.jpg",
-    interviewSrc: "interviews/veaceslav.MOV",
+    interviewSrc:
+      "https://drive.google.com/file/d/1rM7-tg2bnfW2py2JYytp5_uNcjW1UB71/preview",
   },
   {
-    interviewee: "Sample",
-    picture: "interviews/interviewees/sample.jpg",
-    interviewSrc: "interviews/3.mp4",
+    interviewee: "Maria",
+    picture: "interviews/interviewees/sample_f.jpg",
+    interviewSrc:
+      "https://drive.google.com/file/d/1tnkafbMWLw6rGXoHNPF0eDWuENVCjPD2/preview",
   },
 ];
 
@@ -108,13 +110,11 @@ export default function Interviews() {
           <div
             className={"mt-8 flex justify-center aspect-square md:aspect-video"}
           >
-            <ReactPlayer
-              url={selectedInterview.interviewSrc}
-              controls={true}
-              playbackRate={1.25}
+            <iframe
+              src={selectedInterview.interviewSrc}
               width="100%"
-              height={"100%"}
-            />
+              height="100%"
+            ></iframe>
           </div>
         </div>
       )}
