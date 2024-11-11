@@ -9,6 +9,7 @@ import Milestone1 from "./milestone1/Milestone1";
 import Milestone2 from "./milestone2/Milestone2";
 import { TypographyH2 } from "@/components/custom/typography/TypographyH2.jsx";
 import { gradientClassNames } from "@/styles/gradient.js";
+import Milestone3 from "@/components/custom/milestone3/Milestone3.jsx";
 
 const milestones = [
   {
@@ -20,6 +21,11 @@ const milestones = [
     id: "m2",
     title: "Milestone 2",
     content: Milestone2,
+  },
+  {
+    id: "m3",
+    title: "Milestone 3",
+    content: Milestone3,
   },
 ];
 
