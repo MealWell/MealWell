@@ -270,33 +270,37 @@ export default function LandingPage() {
             </h2>
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               <Card>
-                <CardContent className="pt-6">
+                <CardContent className="pt-6 flex flex-col justify-between h-full">
                   <p className="mb-4 text-muted-foreground">
-                    &#34;Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Etiam nec pulvinar neque, sed rutrum diam. Donec
-                    suscipit risus quam, a.&#34;
+                    &#34;As a full-time software engineer and student, this app
+                    could be a game-changer for me. It would save me a
+                    tremendous amount of time while helping me stay on track
+                    with a balanced and healthy diet.&#34;
                   </p>
-                  <p className="font-bold">- Liviu</p>
+                  <p className="font-bold self-end">- Liviu</p>
                 </CardContent>
               </Card>
               <Card>
-                <CardContent className="pt-6">
+                <CardContent className="pt-6 flex flex-col justify-between h-full">
                   <p className="mb-4 text-muted-foreground">
-                    &#34;Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Etiam nec pulvinar neque, sed rutrum diam. Donec
-                    suscipit risus quam, a.&#34;
+                    &#34;This app makes it easy to enjoy a varied meal plan
+                    that’s perfectly tailored to my personal needs and busy
+                    schedule. &#34;
                   </p>
-                  <p className="font-bold">- Veaceslav</p>
+                  <p className="font-bold self-end">- Veaceslav</p>
                 </CardContent>
               </Card>
               <Card>
-                <CardContent className="pt-6">
+                <CardContent className="pt-6 flex flex-col justify-between h-full">
                   <p className="mb-4 text-muted-foreground">
-                    &#34;Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Etiam nec pulvinar neque, sed rutrum diam. Donec
-                    suscipit risus quam, a.&#34;
+                    &#34;The app would be perfect for my busy days—it would be
+                    so convenient to have freshly prepared, nutritious meals
+                    delivered right to me. The ability to customize my delivery
+                    schedule would add incredible flexibility, making it easier
+                    to stay on track with my health goals, even when time is
+                    tight.&#34;
                   </p>
-                  <p className="font-bold">- Maria.</p>
+                  <p className="font-bold self-end">- Maria.</p>
                 </CardContent>
               </Card>
             </div>
