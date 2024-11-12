@@ -1,6 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ChefHat, Utensils, Calculator, Clock } from "lucide-react";
+import {
+  ChefHat,
+  Utensils,
+  Calculator,
+  Clock,
+  ArrowRight,
+  Leaf,
+  BicepsFlexed,
+  Scale,
+  Ruler,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaHamburger } from "react-icons/fa";
@@ -36,6 +46,12 @@ export default function LandingPage() {
           >
             Testimonials
           </Link>
+          <Link
+            className="text-sm font-medium hover:underline underline-offset-4"
+            to="/test"
+          >
+            Test
+          </Link>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -58,6 +74,9 @@ export default function LandingPage() {
           </Link>
           <Link className="text-sm font-medium py-2 hover:underline" to="#">
             Testimonials
+          </Link>
+          <Link className="text-sm font-medium py-2 hover:underline" to="/test">
+            Test
           </Link>
         </nav>
       )}
@@ -178,6 +197,75 @@ export default function LandingPage() {
         <section className="w-full py-12 md:py-24 lg:py-32 bg-muted flex justify-center">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
+              Our Plans
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle>
+                    <div className="flex items-center">
+                      <Ruler className="mr-2 h-6 w-6" />
+                      Weight Loss
+                    </div>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  Calorie-controlled meals to help you reach your weight loss
+                  goals.
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>
+                    <div className="flex items-center">
+                      <BicepsFlexed className="mr-2 h-6 w-6" />
+                      Muscle Gain
+                    </div>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  High-protein meals designed to support muscle growth and
+                  recovery.
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>
+                    <div className="flex items-center">
+                      <Leaf className="mr-2 h-6 w-6" />
+                      Vegetarian
+                    </div>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  Delicious plant-based meals for a balanced vegetarian diet.
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>
+                    <div className="flex items-center">
+                      <Scale className="mr-2 h-6 w-6" />
+                      Balanced
+                    </div>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  Nutritionally balanced meals for overall health and wellness.
+                </CardContent>
+              </Card>
+            </div>
+            <div className="mt-10 text-center">
+              <Button>
+                View All Plans
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-32 flex justify-center">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
               What Our Users Say
             </h2>
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -214,7 +302,7 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 flex justify-center">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-muted flex justify-center">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
