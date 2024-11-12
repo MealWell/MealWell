@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import "tailwindcss/tailwind.css";
 import { gradientClassNames } from "@/styles/gradient.js";
 import { TypographyH3 } from "@/components/custom/typography/TypographyH3.jsx";
@@ -6,9 +5,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel.jsx";
+import ResponsiveCarouselControls from "@/components/ui/responsive-carousel-controls.jsx";
 
 const results = [
   "form-results/Q1.png",
@@ -46,8 +44,7 @@ export default function FormResults() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <ResponsiveCarouselControls />
         </Carousel>
       </div>
     </div>

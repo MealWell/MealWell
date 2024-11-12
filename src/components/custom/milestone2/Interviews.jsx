@@ -12,9 +12,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel.jsx";
+import ResponsiveCarouselControls from "@/components/ui/responsive-carousel-controls.jsx";
 
 const interviews = [
   {
@@ -96,8 +95,7 @@ export default function Interviews() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <ResponsiveCarouselControls />
         </Carousel>
         <div className="py-2 text-center text-sm text-muted-foreground">
           Intervievatul {current} din {count} (glisează)
