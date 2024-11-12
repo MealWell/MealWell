@@ -46,12 +46,6 @@ export default function LandingPage() {
           >
             Testimonials
           </Link>
-          <Link
-            className="text-sm font-medium hover:underline underline-offset-4"
-            to="/test"
-          >
-            Test
-          </Link>
         </nav>
 
         {/* Mobile Menu Toggle */}
