@@ -10,14 +10,16 @@ const LandingPage = () => {
       <TypographyH3 className={`${gradientClassNames}`}>
         Landing page
       </TypographyH3>
-      <TypographyP>
-        Vizualizează landing page-ul nostru:{" "}
-        {
-          <Button asChild variant={"outline"}>
-            <Link to={`/landing`}>Landing page</Link>
-          </Button>
-        }
-      </TypographyP>
+      <div className="text-justify space-y-2">
+        <TypographyP>
+          Vizualizează landing page-ul nostru:{" "}
+          {
+            <Button asChild variant={"outline"}>
+              <Link to={`/landing`}>Landing page</Link>
+            </Button>
+          }
+        </TypographyP>
+      </div>
     </div>
   );
 };
