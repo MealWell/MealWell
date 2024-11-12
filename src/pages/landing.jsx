@@ -69,9 +69,6 @@ export default function LandingPage() {
           <Link className="text-sm font-medium py-2 hover:underline" to="#">
             Testimonials
           </Link>
-          <Link className="text-sm font-medium py-2 hover:underline" to="/test">
-            Test
-          </Link>
         </nav>
       )}
       <main className="flex-1">
