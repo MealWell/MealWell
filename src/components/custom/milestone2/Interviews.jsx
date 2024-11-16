@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "tailwindcss/tailwind.css";
 import { Button } from "@/components/ui/button.jsx";
 import {
@@ -14,6 +14,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel.jsx";
 import ResponsiveCarouselControls from "@/components/ui/responsive-carousel-controls.jsx";
+import { StatesContext } from "../ProjectAccordion";
 
 const interviews = [
   {
@@ -41,6 +42,7 @@ export default function Interviews() {
   const [api, setApi] = useState();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
+  const states = useContext(StatesContext);
 
   useEffect(() => {
     if (!api) {
@@ -56,7 +58,7 @@ export default function Interviews() {
   }, [api]);
 
   return (
-    <div>
+    <div ref={states.m2InterviewsRef}>
       <TypographyH3 className={`${gradientClassNames}`}>
         Interviuri cu clienții
       </TypographyH3>
