@@ -13,7 +13,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog.jsx";
-import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 
 const images = [
   {
@@ -94,10 +93,10 @@ export default function ImageCarousel() {
                     </Card>
                   </DialogTrigger>
                   <DialogContent className={"max-w-[90%] max-h-[90%] p-0"}>
-                    <VisuallyHidden.Root>
-                      <DialogTitle>Wireframe</DialogTitle>
-                      <DialogDescription>Wireframe</DialogDescription>
-                    </VisuallyHidden.Root>
+                    <DialogTitle className="sr-only">Wireframe</DialogTitle>
+                    <DialogDescription className="sr-only">
+                      Wireframe
+                    </DialogDescription>
                     <div className={"max-w-[90vw] max-h-[90vh] p-0"}>
                       <img
                         src={image.src}

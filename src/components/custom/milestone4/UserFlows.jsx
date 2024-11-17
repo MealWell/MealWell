@@ -15,7 +15,6 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog.jsx";
 import { useEffect, useState } from "react";
-import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 
 const flows = [
   {
@@ -77,10 +76,10 @@ const UserFlowCarousel = () => {
                     </Card>
                   </DialogTrigger>
                   <DialogContent className={"max-w-[90%] max-h-[90%] p-0"}>
-                    <VisuallyHidden.Root>
-                      <DialogTitle>Flow</DialogTitle>
-                      <DialogDescription>Flow</DialogDescription>
-                    </VisuallyHidden.Root>
+                    <DialogTitle className="sr-only">Flow</DialogTitle>
+                    <DialogDescription className="sr-only">
+                      Flow
+                    </DialogDescription>
                     <div className={"max-w-[90vw] max-h-[90vh] p-0"}>
                       <img
                         src={flow.src}
