@@ -4,12 +4,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { useState } from "react";
+import { createContext, useRef, useState } from "react";
 import Milestone1 from "./milestone1/Milestone1";
 import Milestone2 from "./milestone2/Milestone2";
 import { TypographyH2 } from "@/components/custom/typography/TypographyH2.jsx";
 import { gradientClassNames } from "@/styles/gradient.js";
 import Milestone3 from "@/components/custom/milestone3/Milestone3.jsx";
+import Milestone4 from "./milestone4/Milestone4";
 
 const milestones = [
   {
@@ -27,7 +28,14 @@ const milestones = [
     title: "Milestone 3",
     content: Milestone3,
   },
+  {
+    id: "m4",
+    title: "Milestone 4",
+    content: Milestone4,
+  },
 ];
+
+export const StatesContext = createContext();
 
 const ProjectAccordion = () => {
   const getOpenSectionsFromURL = () => {
@@ -47,7 +55,7 @@ const ProjectAccordion = () => {
     window.history.replaceState(
       {},
       "",
-      `${window.location.pathname}?${params.toString()}`,
+      `${window.location.pathname}?${params.toString()}`
     );
   };
 
@@ -60,25 +68,33 @@ const ProjectAccordion = () => {
     setOpenSections(updatedSections);
     updateURL(updatedSections);
   };
+
+  const states = {
+    m2InterviewsRef: useRef(),
+    toggleSection,
+  };
+
   return (
     <div className="w-full flex justify-center mt-5">
-      <Accordion type="multiple" className="w-3/4" defaultValue={openSections}>
-        {milestones.map((milestone) => (
-          <AccordionItem key={milestone.id} value={milestone.id}>
-            <AccordionTrigger
-              className="flex justify-center hover:no-underline"
-              onClick={() => toggleSection(milestone.id)}
-            >
-              <TypographyH2 className={`${gradientClassNames}`}>
-                {milestone.title}
-              </TypographyH2>
-            </AccordionTrigger>
-            <AccordionContent>
-              <milestone.content />
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
+      <StatesContext.Provider value={states}>
+        <Accordion type="multiple" className="w-3/4" value={openSections}>
+          {milestones.map((milestone) => (
+            <AccordionItem key={milestone.id} value={milestone.id}>
+              <AccordionTrigger
+                className="flex justify-center hover:no-underline"
+                onClick={() => toggleSection(milestone.id)}
+              >
+                <TypographyH2 className={`${gradientClassNames}`}>
+                  {milestone.title}
+                </TypographyH2>
+              </AccordionTrigger>
+              <AccordionContent>
+                <milestone.content />
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </StatesContext.Provider>
     </div>
   );
 };
