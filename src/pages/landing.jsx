@@ -291,7 +291,7 @@ export default function LandingPage() {
                     to stay on track with my health goals, even when time is
                     tight.&#34;
                   </p>
-                  <p className="font-bold self-end">- Maria.</p>
+                  <p className="font-bold self-end">- Maria</p>
                 </CardContent>
               </Card>
             </div>

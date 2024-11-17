@@ -35,7 +35,7 @@ const Interviews = () => {
           setShouldScroll(false);
           clearInterval(interval);
         }
-      }, 200); // Check every 100ms if the ref is set
+      }, 200);
     }
   }, [shouldScroll, states.m2InterviewsRef]);
 
