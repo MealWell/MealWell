@@ -95,8 +95,8 @@ export default function ImageCarousel() {
                   </DialogTrigger>
                   <DialogContent className={"max-w-[90%] max-h-[90%] p-0"}>
                     <VisuallyHidden.Root>
-                      <DialogTitle>Flow</DialogTitle>
-                      <DialogDescription>Flow</DialogDescription>
+                      <DialogTitle>Wireframe</DialogTitle>
+                      <DialogDescription>Wireframe</DialogDescription>
                     </VisuallyHidden.Root>
                     <div className={"max-w-[90vw] max-h-[90vh] p-0"}>
                       <img
