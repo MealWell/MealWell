@@ -9,8 +9,11 @@ import ResponsiveCarouselControls from "@/components/ui/responsive-carousel-cont
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
+  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog.jsx";
+import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 
 const images = [
   {
@@ -91,6 +94,10 @@ export default function ImageCarousel() {
                     </Card>
                   </DialogTrigger>
                   <DialogContent className={"max-w-[90%] max-h-[90%] p-0"}>
+                    <VisuallyHidden.Root>
+                      <DialogTitle>Flow</DialogTitle>
+                      <DialogDescription>Flow</DialogDescription>
+                    </VisuallyHidden.Root>
                     <div className={"max-w-[90vw] max-h-[90vh] p-0"}>
                       <img
                         src={image.src}
